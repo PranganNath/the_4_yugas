@@ -1,0 +1,694 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #3b2f2f;
+    line-height: 1.6;
+    background-color: #fffaf5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =========================
+   HEADER & NAVBAR
+========================= */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Header layout */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+}
+
+/* Logo container */
+.logo a {
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 0;
+}
+
+/* Logo image */
+.logo img {
+    height: 72px;        /* increased from 55px */
+    width: auto;
+    display: block;
+}
+
+/* Navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #3b2f2f;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #8b4513;
+}
+
+/* =========================
+   LOGO + BRAND NAME
+========================= */
+.logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 72px;
+    width: auto;
+    display: block;
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #8b4513;           /* matches bakery palette */
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    height: 80vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+    ),
+    url("../images/hero.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    color: #ffffff;
+    max-width: 700px;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+    display: inline-block;
+    background-color: #8b4513;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #6f3610;
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+.features {
+    padding: 4rem 0;
+    background-color: #fff3e8;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.feature h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+    color: #8b4513;
+}
+
+.feature p {
+    font-size: 0.95rem;
+}
+
+/* =========================
+   BESTSELLERS
+========================= */
+.bestsellers {
+    padding: 4rem 0;
+    background-color: #ffffff;
+}
+
+.bestsellers h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 2.5rem;
+    color: #8b4513;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: #fffaf5;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h4 {
+    margin: 1rem 0 0.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.product-card p {
+    padding-bottom: 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   CALL TO ACTION
+========================= */
+.cta {
+    padding: 4rem 0;
+    background-color: #8b4513;
+    color: #ffffff;
+    text-align: center;
+}
+
+.cta h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    margin-bottom: 1.5rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: #2c1e1e;
+    color: #ffffff;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.footer-container h3,
+.footer-container h4 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.8rem;
+}
+
+.footer-container p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #1f1414;
+    font-size: 0.85rem;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+/* =========================
+   MENU PAGE
+========================= */
+.menu-page {
+    padding: 4rem 0;
+}
+
+.menu-page h2 {
+    font-family: 'Playfair Display', serif;
+    color: #8b4513;
+    margin: 3rem 0 1.5rem;
+    text-align: center;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background-color: #fffaf5;
+}
+
+.menu-table th,
+.menu-table td {
+    padding: 0.8rem;
+    border-bottom: 1px dashed #ddd;
+    text-align: left;
+}
+
+.menu-table th {
+    background-color: #fff3e8;
+    font-weight: 500;
+}
+
+.menu-note {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #555;
+}
+
+/* =========================
+   MENU DOWNLOAD
+========================= */
+.menu-download {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.menu-download .btn {
+    font-size: 1rem;
+    padding: 0.9rem 1.8rem;
+}
+
+/* =========================
+   HERO SLIDESHOW
+========================= */
+.hero {
+    position: relative;
+    height: 85vh;
+    overflow: hidden;
+}
+
+/* Slideshow container */
+.slideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+/* Slides */
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Active slide */
+.slide.active {
+    opacity: 1;
+}
+
+/* Dark overlay */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+}
+
+/* Hero text */
+.hero-content {
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+    color: #ffffff;
+    max-width: 800px;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 1rem;
+}
+
+.hero-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;      /* increased */
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.hero-content p {
+    font-size: 1.3rem;      /* slightly larger */
+    margin-bottom: 2.2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+/* =========================
+   SLIDE CAPTION
+========================= */
+.slide-caption {
+    margin-top: 1.8rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #f5d7a1; /* soft gold */
+    letter-spacing: 0.5px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+/* Caption visible */
+.slide-caption.show {
+    opacity: 1;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .slide-caption {
+        font-size: 1.2rem;
+    }
+}
+
+.product-card h4 {
+    color: #3b2f2f;
+    font-size: 1.1rem;
+}
+
+.product-card p {
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 58px;
+    }
+
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+.about-page {
+    padding: 4rem 0;
+    background-color: #fffaf5;
+}
+
+.about-header h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    color: #3b2f2f;
+}
+
+.about-header span {
+    color: #8b4513;
+}
+
+/* Layout */
+.about-content {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* Text */
+.about-text p {
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+}
+
+.about-highlight {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #8b4513;
+    margin-top: 2rem;
+}
+
+/* Images */
+.about-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+}
+
+.about-images img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-header h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* =========================
+   ABOUT HERO SLIDESHOW
+========================= */
+.about-hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+/* Slideshow */
+.about-slideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.about-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.about-slide.active {
+    opacity: 1;
+}
+
+/* Overlay */
+.about-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 2;
+}
+
+/* Text content */
+.about-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 0 1.2rem;
+    color: #fff;
+}
+
+.about-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero-content h1 span {
+    color: #f5d7a1;
+}
+
+.about-hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.about-hero-content .intro {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-hero-content .highlight {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-top: 1.8rem;
+    color: #f5d7a1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-hero {
+        height: auto;
+        padding: 5rem 0;
+    }
+
+    .about-hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-hero-content p {
+        font-size: 1rem;
+    }
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+.contact-page {
+    padding: 4rem 0;
+    background-color: #fffaf5;
+}
+
+.contact-page h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    color: #3b2f2f;
+}
+
+/* Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* Image */
+.contact-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+/* Details */
+.contact-details p {
+    font-size: 1.05rem;
+    margin-bottom: 1.4rem;
+    line-height: 1.8;
+}
+
+.contact-details a {
+    color: #8b4513;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Map */
+.map-section {
+    margin-top: 4rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-page h1 {
+        font-size: 2.2rem;
+    }
+}
+
